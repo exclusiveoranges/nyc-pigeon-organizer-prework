@@ -20,16 +20,16 @@ require 'pry'
 
 def nyc_pigeon_organizer(data)
 
-data.each_with_object({}) do |(keys, values), pigeon_hash|
-  values.each do |key, value|
-    value.each do |name|
+  data.each_with_object({}) do |(keys, values), pigeon_hash|
+    values.each do |key, value|
+      value.each do |name|
       pigeon_hash[name] ||= {}
         pigeon_hash[name][keys] ||= []
           pigeon_hash[name][keys]<<key.to_s
   # binding.pry
+      end
     end
   end
-end
 end
 
 
